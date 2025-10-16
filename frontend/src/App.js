@@ -55,8 +55,12 @@ function App() {
     setTypingUsers([]);
   };
 
-  const handleSaveCode = (code, language) => {
-    socket.emit('save-code', { code, language });
+  const handleSaveCode = () => {
+    // This will be called from CodeEditor component
+    socket.emit('save-code', { 
+      code: 'current code will be passed from editor', 
+      language: 'current language will be passed from editor' 
+    });
   };
 
   return (
@@ -83,7 +87,6 @@ function App() {
                 <p>Welcome, {username}!</p>
               </div>
               <div className="controls">
-                <button className="btn btn-success" onClick={() => handleSaveCode}>Save</button>
                 <button className="btn" onClick={handleLeaveRoom}>Leave Room</button>
               </div>
             </div>

@@ -158,3 +158,67 @@ code {
   color: #721c24;
   border: 1px solid #f5c6cb;
 }
+
+/* Add these styles for output panel */
+.output-container {
+  background-color: #1e1e1e;
+  border-top: 1px solid #444;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.output-header {
+  padding: 0.5rem 1rem;
+  background-color: #2d2d2d;
+  border-bottom: 1px solid #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.output-content {
+  flex: 1;
+  padding: 1rem;
+  overflow: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #00ff00;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.html-preview {
+  width: 50%;
+  border-left: 1px solid #444;
+  display: flex;
+  flex-direction: column;
+}
+
+.run-button {
+  background-color: #28a745 !important;
+}
+
+.run-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Scrollbar styling for output */
+.output-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.output-content::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+
+.output-content::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+.output-content::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
